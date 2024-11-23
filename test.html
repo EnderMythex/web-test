@@ -10,34 +10,6 @@
 
 <body>
     <h1>Hi</h1>
-
-    <script>
-        let deferredPrompt;
-
-        // Capture de l'événement 'beforeinstallprompt'
-        window.addEventListener('beforeinstallprompt', (e) => {
-            // Empêcher l'invite d'être montrée automatiquement
-            e.preventDefault();
-            // Sauvegarder l'événement pour l'afficher plus tard
-            deferredPrompt = e;
-
-            // Simuler l'affichage de l'invite automatiquement après 2 secondes
-            setTimeout(() => {
-                // Vérifier si l'événement est prêt à être déclenché
-                if (deferredPrompt) {
-                    deferredPrompt.prompt();
-                    deferredPrompt.userChoice.then((choiceResult) => {
-                        if (choiceResult.outcome === 'accepted') {
-                            console.log('Utilisateur a accepté l\'installation');
-                        } else {
-                            console.log('Utilisateur a refusé l\'installation');
-                        }
-                        deferredPrompt = null;  // Réinitialiser l'invite après la réponse
-                    });
-                }
-            }, 2000);  // Attendez 2 secondes avant de déclencher l'invite
-        });
-    </script>
 </body>
 
 </html>
