@@ -1,7 +1,7 @@
 {
     "name": "CyberCookie",
     "short_name": "App",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
@@ -19,13 +19,13 @@
     ],
     "screenshots": [
         {
-            "src": "Lvl1.png",
+            "src": "./Lvl1.png",
             "sizes": "1645x803",
             "type": "image/png",
             "form_factor": "wide"
         },
         {
-            "src": "Lvl2.png",
+            "src": "./Lvl2.png",
             "sizes": "1666x824",
             "type": "image/png",
             "form_factor": "narrow"
